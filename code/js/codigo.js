@@ -5,6 +5,8 @@ var lbl4 = window.document.getElementById('lbl4')
 var res = window.document.getElementById('res')
 
 function btnclick(){
+    //G1 é igual ao primeiro bimestre e G2 é igual ao segundo
+    //Lá é dividido por semestres
     var g1 = Number(lbl1.value)
     var rec1 = Number(lbl2.value)
     var g2 = Number(lbl3.value)
