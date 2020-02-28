@@ -7,7 +7,7 @@ Após isso resolvi colocar aqui no GitHub.
 
 ## E como funciona?
 
-A escola é dividida em semestres, denominados periodos, sendo divido em primeiro e segundo bimestres que, respectivamente, denominados G1 e G2.
+A periodo é dividida em semestres, denominados periodos, sendo divido em primeiro e segundo bimestres que, respectivamente, denominados G1 e G2.
 
 A fórmula para o calculo das médias de todo o periodo é o seguinte: (G1 + 2 * G2)/3
 
