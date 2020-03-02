@@ -37,6 +37,7 @@ input#lbl1, input#lbl2, input#lbl3, input#lbl4{
     border-radius: 7px;
     border-color: green;
     text-align: center;
+    outline: none;
 }
 div#res {
     font-size: 20px;
