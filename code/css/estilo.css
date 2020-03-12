@@ -31,7 +31,10 @@ input#btn {
     width: 80px;
     background-color: rgb(3, 243, 3);
     border-color: green;
+    color: white;
     border-radius: 7px;
+    outline: none;
+
 }
 input#lbl1, input#lbl2, input#lbl3, input#lbl4{
     border-radius: 7px;
