@@ -119,10 +119,9 @@ function btnclick(){
     
                     }
                     else if (g2 >= 6){
-                        //se o aluno passou direto
     
                         mf = (rec1 + 2 * g2) / 3;
-                        res.innerText = `Sua média do g1 é ${rec1.toFixed(1)} e final é ${mf.toFixed(1)}, você passou, parabens!`;
+                        res.innerText = `Sua média do g1 é ${mf.toFixed(1)} e final é ${mf.toFixed(1)}, você passou, parabens!`;
                         res.style.color =  "black"
 
                     }
