@@ -36,7 +36,7 @@ input#btn {
     outline: none;
 
 }
-input#lbl1, input#lbl2, input#lbl3, input#lbl4{
+input#lblg1, input#lblr1, input#lblg2, input#lblr2{
     border-radius: 7px;
     border-color: green;
     text-align: center;
