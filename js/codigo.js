@@ -6,12 +6,14 @@ const lblr1 = window.document.getElementById('lblr1');
 const lblg2 = window.document.getElementById('lblg2');
 const lblr2 = window.document.getElementById('lblr2');
 const res = window.document.getElementById('res');
+const erro = window.document.getElementById('error')
+
 
 function btnclick(){
 
     if (lblg1.value.length == 0){
 
-        window.alert('[ERROR] Faltam dados!');
+        erro.innerText = '[ERROR] FALTAM DADOS!';
 
     }
     else{
@@ -20,7 +22,7 @@ function btnclick(){
 
         if (g1 < 0 || g1 > 10){
 
-            window.alert('[ERROR] NOTA IMPOSSÍVEL!!!!!');
+            erro.innerText = '[ERROR] NOTA IMPOSSÍVEL!!!!!';
 
         }
         else if (g1 >= 6){
@@ -38,7 +40,7 @@ function btnclick(){
 
                 if (g2 < 0 || g2 > 10){
 
-                    window.alert('[ERROR] NOTA IMPOSSÍVEL!!!!!');
+                    erro.innerText = '[ERROR] NOTA IMPOSSÍVEL!!!!!';
 
                 }
                 else if (g2 >= 6){
@@ -98,7 +100,7 @@ function btnclick(){
     
                     if (g2 < 0 || g2 > 10){
     
-                        window.alert('[ERROR] NOTA IMPOSSÍVEL!!!!!');
+                        erro.innerText = '[ERROR] NOTA IMPOSSÍVEL!!!!!';
     
                     }
                     else if (g2 >= 6){
