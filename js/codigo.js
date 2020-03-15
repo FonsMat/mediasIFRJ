@@ -22,7 +22,7 @@ function btnclick(){
 
         if (g1 < 0 || g1 > 10){
 
-            res.innerText = '[ERROR] NOTA IMPOSSÍVEL!!!!!';
+            res.innerText = '[ERROR] NOTA IMPOSSÍVEL! SUA NOTA DEVE ESTAR ENTRE 0 E 10!';
             res.style.color = "red"
 
         }
@@ -44,7 +44,7 @@ function btnclick(){
 
                 if (g2 < 0 || g2 > 10){
 
-                    res.innerText = '[ERROR] NOTA IMPOSSÍVEL!!!!!';
+                    res.innerText = '[ERROR] NOTA IMPOSSÍVEL! SUA NOTA DEVE ESTAR ENTRE 0 E 10!';
                     res.style.color = "red"
 
                 }
@@ -69,20 +69,28 @@ function btnclick(){
                         //se o aluno ficou de rec no g2
 
                         const rec2 = Number(lblr2.value);
-                        const mg2 = (2 * g1 + 3 * rec2) / 5;
-                        const mfr2 = (g1 + 2 * mg2) / 3;
-
-                        if (mfr2 >= 6){
-
-                            res.innerText = `Sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mfr2.toFixed(1)}!! Você passou, parabens!!!`;
-                            res.style.color =  "black"
-
+                        if (rec2 < 0 || rec2 > 10){
+    
+                            res.innerText = '[ERROR] NOTA IMPOSSÍVEL! SUA NOTA DEVE ESTAR ENTRE 0 E 10!';
+                            res.style.color =  "red"
+        
                         }
-                        else {
+                        else{
+                            const mg2 = (2 * g1 + 3 * rec2) / 5;
+                            const mfr2 = (g1 + 2 * mg2) / 3;
 
-                            res.innerText = `Sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mfr2.toFixed(1)}!!  Você não passou, boa sorte no proximo periodo!`;
-                            res.style.color =  "black"
-                            
+                            if (mfr2 >= 6){
+
+                                res.innerText = `Sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mfr2.toFixed(1)}!! Você passou, parabens!!!`;
+                                res.style.color =  "black"
+
+                            }
+                            else {
+
+                                res.innerText = `Sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mfr2.toFixed(1)}!!  Você não passou, boa sorte no proximo periodo!`;
+                                res.style.color =  "black"
+                                
+                            }
                         }
                     }
                 }
@@ -102,7 +110,13 @@ function btnclick(){
                 const nrec1 = Number(lblr1.value)
                 const rec1 = (2 * g1 + 3 * nrec1) / 5
 
-                if (lblg2.value.length == 0){
+                if (rec1 < 0 || rec1 > 10){
+    
+                    res.innerText = '[ERROR] NOTA IMPOSSÍVEL! SUA NOTA DEVE ESTAR ENTRE 0 E 10!';
+                    res.style.color =  "red"
+
+                }
+                else if (lblg2.value.length == 0){
 
                     const g2v = (18 - rec1) / 2;
                     res.innerText = `Sua média do g1 é ${rec1.toFixed(1)} e você precisa tirar ${g2v.toFixed(1)} no G2 para passar!`;
@@ -113,9 +127,10 @@ function btnclick(){
                     const g2 = parseFloat(lblg2.value);
                     const mfr1 = (rec1 + 2 * g2) / 3;
 
+                    
                     if (g2 < 0 || g2 > 10){
     
-                        res.innerText = '[ERROR] NOTA IMPOSSÍVEL!!!!!';
+                        res.innerText = '[ERROR] NOTA IMPOSSÍVEL! SUA NOTA DEVE ESTAR ENTRE 0 E 10!';
                         res.style.color =  "red"
     
                     }
