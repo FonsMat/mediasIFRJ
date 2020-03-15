@@ -40,6 +40,7 @@ function btnclick(){
             else {
 
                 const g2 = Number(lblg2.value);
+                const mf = (g1 + 2 * g2) / 3;
 
                 if (g2 < 0 || g2 > 10){
 
@@ -47,16 +48,15 @@ function btnclick(){
                     res.style.color = "red"
 
                 }
-                else if (g2 >= 6){
+                else if (mf >= 6){
                     //se o aluno passou direto
 
-                    mf = (g1 + 2 * g2) / 3;
                     res.innerText = `Sua média final é ${mf.toFixed(1)}, você passou, parabens!`;
                     res.style.color =  "black"
     
 
                 }
-                else {
+                else if (mf < 6){
 
                     if (lblr2.value.length == 0){
 
@@ -70,17 +70,17 @@ function btnclick(){
 
                         const rec2 = Number(lblr2.value);
                         const mg2 = (2 * g1 + 3 * rec2) / 5;
-                        const mf = (g1 + 2 * mg2) / 3;
+                        const mfr2 = (g1 + 2 * mg2) / 3;
 
-                        if (mf >= 6){
+                        if (mfr2 >= 6){
 
-                            res.innerText = `Sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mf.toFixed(1)}!! Você passou, parabens!!!`;
+                            res.innerText = `Sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mfr2.toFixed(1)}!! Você passou, parabens!!!`;
                             res.style.color =  "black"
 
                         }
                         else {
 
-                            res.innerText = `Sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mf.toFixed(1)}!!  Você não passou, boa sorte no proximo periodo!`;
+                            res.innerText = `Sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mfr2.toFixed(1)}!!  Você não passou, boa sorte no proximo periodo!`;
                             res.style.color =  "black"
                             
                         }
@@ -110,22 +110,22 @@ function btnclick(){
                 }
                 else {
     
-                    const g2 = Number(lblg2.value);
-    
+                    const g2 = parseFloat(lblg2.value);
+                    const mfr1 = (rec1 + 2 * g2) / 3;
+
                     if (g2 < 0 || g2 > 10){
     
                         res.innerText = '[ERROR] NOTA IMPOSSÍVEL!!!!!';
                         res.style.color =  "red"
     
                     }
-                    else if (g2 >= 6){
+                    else if (mfr1 >= 6){
     
-                        mf = (rec1 + 2 * g2) / 3;
-                        res.innerText = `Sua média do g1 é ${mf.toFixed(1)} e final é ${mf.toFixed(1)}, você passou, parabens!`;
+                        res.innerText = `Sua média do g1 é ${rec1.toFixed(1)} e final é ${mfr1.toFixed(1)}, você passou, parabens!`;
                         res.style.color =  "black"
 
                     }
-                    else {
+                    else{
     
                         if (lblr2.value.length == 0){
     
@@ -139,16 +139,16 @@ function btnclick(){
     
                             const rec2 = Number(lblr2.value);
                             const mg2 = (2 * rec1 + 3 * rec2) / 5;
-                            const mf = (rec1 + 2 * mg2) / 3;
+                            const mfr1r2 = (rec1 + 2 * mg2) / 3;
     
-                            if (mf >= 6){
+                            if (mfr1r2 >= 6){
     
-                                res.innerText = `Sua média do g1 é ${rec1.toFixed(1)} e sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mf.toFixed(1)}!! Você passou, parabens!!!`;
+                                res.innerText = `Sua média do g1 é ${rec1.toFixed(1)} e sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mfr1r2.toFixed(1)}!! Você passou, parabens!!!`;
                                 res.style.color =  "black"
                             }
                             else {
     
-                                res.innerText = `Sua média do g1 é ${rec1.toFixed(1)} e sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mf.toFixed(1)}!!  Você não passou, boa sorte no proximo periodo!`;
+                                res.innerText = `Sua média do g1 é ${rec1.toFixed(1)} e sua média do G2 é ${mg2.toFixed(1)} e sua média final é ${mfr1r2.toFixed(1)}!!  Você não passou, boa sorte no proximo periodo!`;
                                 res.style.color =  "black"
                                 
                             }
