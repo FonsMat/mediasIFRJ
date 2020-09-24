@@ -1,5 +1,5 @@
 # Medias do IFRJ
-## Um programa que lê as notas dos alunos do IFRJ e calcula sua média.
+## Um programa que lê as notas dos alunos do IFRJ, calcula sua média e mostra quanto falta pra passar de periodo.
 
 Na minha escola, o metodo de calcular a média é bem dificil e diferente das demais escolas, por isso existe uma certa dificuldade em calcular a média.
 Então eu como aspirante a programador, resolvi automatizar isso para facilitar a vida de todos!
